@@ -24,6 +24,7 @@ export async function addProduct(prevState: unknown, formData: FormData) {
     return result.error.formErrors.fieldErrors;
   }
 
+
   const data = result.data;
 
   await fs.mkdir("products", { recursive: true });
