@@ -1,4 +1,4 @@
-import { formatCurrency } from "@/lib/formatters"
+import { formatCurrency } from "@/lib/formatters";
 import {
   Card,
   CardContent,
@@ -6,18 +6,18 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "./ui/card"
-import { Button } from "./ui/button"
-import Link from "next/link"
-import Image from "next/image"
+} from "./ui/card";
+import { Button } from "./ui/button";
+import Link from "next/link";
+import Image from "next/image";
 
 type ProductCardProps = {
-  id: string
-  name: string
-  priceInCents: number
-  description: string
-  imagePath: string
-}
+  id: string;
+  name: string;
+  priceInCents: number;
+  description: string;
+  imagePath: string;
+};
 
 const ProductCard = async ({
   id,
@@ -25,7 +25,7 @@ const ProductCard = async ({
   priceInCents,
   description,
   imagePath,
-}: ProductCardProps)  => {
+}: ProductCardProps) => {
   return (
     <Card className="flex overflow-hidden flex-col">
       <div className="relative w-full h-auto aspect-video">
@@ -44,39 +44,32 @@ const ProductCard = async ({
         </Button>
       </CardFooter>
     </Card>
-  )
-}
+  );
+};
 
-export default ProductCard
-
+export default ProductCard;
 
 export const ProductCardSkeleton = () => {
   return (
-
     <Card className="flex overflow-hidden flex-col animate-pulse">
       <div className="w-full bg-gray-300 aspect-video" />
 
-
       <CardHeader>
         <CardTitle>
-          <div className="w-3/4 h-6 rounded-full bg-gray-300"/>
-          </CardTitle>
+          <div className="w-3/4 h-6 rounded-full bg-gray-300" />
+        </CardTitle>
         <CardDescription>
-          <div  className="w-1/2 h-4 rounded-full bg-gray-300"/>
-          </CardDescription>
+          <div className="w-1/2 h-4 rounded-full bg-gray-300" />
+        </CardDescription>
       </CardHeader>
       <CardContent className="space-y-2">
-        <div className="w-full h-4 rounded-full bg-gray-300"/>
-         <div className="w-full h-4 rounded-full bg-gray-300"/>
-        <div className="w-3/4 h-4 rounded-full bg-gray-300"/>
-
+        <div className="w-full h-4 rounded-full bg-gray-300" />
+        <div className="w-full h-4 rounded-full bg-gray-300" />
+        <div className="w-3/4 h-4 rounded-full bg-gray-300" />
       </CardContent>
       <CardFooter>
-        <Button asChild size="lg" disabled className="w-full">
-
-        </Button>
+        <Button asChild size="lg" disabled className="w-full"></Button>
       </CardFooter>
     </Card>
-
-  )
-}
+  );
+};
